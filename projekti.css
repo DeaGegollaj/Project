@@ -1,0 +1,97 @@
+.header{
+ background-color:#FACBBB;
+ text-align:right;
+ color: #688682;
+ padding: 50px;
+ margin: 0%;
+ font-size: x-large;
+ align-items: flex-start;
+ border: solid #688682;
+ box-shadow:3px 3px 3px #688682;
+}
+
+  #slidercontainer {
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    height: 100%;
+    box-shadow:3px 3px 3px #688682 ;
+
+  }
+
+
+  .photos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+    
+  }
+
+  .img{
+    width: 300px;
+    margin-top: 5px;
+    height: 200px;
+  }
+  .cmimi{
+    color: teal;
+    text-align: center;
+    
+  }
+  .fjalet{
+    color: teal;
+    text-align: center;
+  }
+  .header2{
+    text-align: center;
+    color: #FACBBB;
+  }
+  .button{
+    margin-bottom: 5px;
+  }
+  .numrat{
+    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .pages{
+    flex-direction: row;
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+  }
+  .button1{
+    text-align: right;
+    align-items: end;
+    flex-direction: row;
+  }
+  .f1{
+    background-color: #688682;
+    flex-direction: row;
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+  
+  }
+  .footerleft{
+    align-items: baseline;
+    text-align: left;
+    flex-direction: row;
+  }
+  .fundi{
+    align-items: center;
+  }
