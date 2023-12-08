@@ -1,0 +1,106 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background-color: #efefba;
+}
+.logo{
+    text-align: left;
+    align-items: start;
+  }
+  .header{
+   background-color:#FACBBB;
+   text-align:center;
+   color: #688682;
+   padding: 50px;
+   margin: 0%;
+   font-size: large;
+   align-content: baseline;
+   border: solid #688682;
+   box-shadow:3px 3px 3px #688682;
+   font-family: sans-serif;
+   justify-content:space-between;
+   display: flex;
+   align-items: baseline;
+   flex-wrap: wrap;
+  }
+       
+.heading{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+.heading h1{
+    font: size 55px;
+    color:#688682;
+    margin-bottom: 25px;
+    position: relative;
+}
+.heading h3{
+    font-size:20px;
+    margin-bottom: 15px;
+    color:#688682;     
+}
+.heading p{
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+.Blog-photo{
+    justify-content: start;
+    box-shadow: 3px 3px 3px gray;
+    margin-left: 30px;
+    border-radius: 4px;
+}
+.paragraph{
+justify-content: end;
+font-size: 20%;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    color:#688682;
+}
+.f{
+    background-color: #fde6df;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 250px;
+    padding-right: 250px;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-top: 40px;
+  }
+  .ff{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+
+  }
+  .footerleft{
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: stretch;
+
+  }
+  .fundi{
+    text-align: center;
+  }
+   
