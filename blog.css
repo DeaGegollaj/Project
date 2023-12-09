@@ -21,7 +21,7 @@ body{
    align-content: baseline;
    border: solid #688682;
    box-shadow:3px 3px 3px #688682;
-   font-family: sans-serif;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    justify-content:space-between;
    display: flex;
    align-items: baseline;
@@ -60,7 +60,6 @@ body{
 }
 .paragraph{
 justify-content: end;
-font-size: 20%;
 }
 .content{
     display: flex;
@@ -70,27 +69,42 @@ font-size: 20%;
     color:#688682;
 }
 .f{
-    background-color: #fde6df;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 250px;
-    padding-right: 250px;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    margin-top: 40px;
+   background-color: #fde6df;
+   color:#688682;
+   display:flex;
+   justify-content: center;
+   padding-left: 250px;
+   padding-right: 250px;
+   align-content: strech;
+   flex-wrap: nowrap;
+   margin-top: 100px;
+   font-size: 25px;
+   font-style: bold;
   }
-  .ff{
+.ff{
     display: flex;
-    margin-top: 40px;
+    background-color: #fde6df;
+    margin-top: 60px;
+    margin-bottom: 60px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items:end;
     align-content: center;
-
   }
-  .footerleft{
+.footermain{
+    padding-right: 250px;
+    padding-left:250px ;
+    background-color: #fde6df;
+    color:#688682;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: stretch;
+}
+.footerleft{
     width: 330px;
     display: flex;
     flex-direction: column;
@@ -98,9 +112,20 @@ font-size: 20%;
     justify-content: flex-start;
     align-items: baseline;
     align-content: stretch;
-
   }
+.footercenter{
+      width: 200px;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: baseline;
+      align-content: stretch;
+  }
+  
   .fundi{
     text-align: center;
   }
+  
+
    
