@@ -3,6 +3,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: rgb(221, 227, 229);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .logo{
   text-align: left;
@@ -12,7 +13,7 @@ body{
  background-color:#FACBBB;
  text-align:center;
  color: #688682;
- padding: 50px;
+ padding: 20px;
  margin: 0%;
  font-size: large;
  align-content: baseline;
@@ -23,6 +24,8 @@ body{
  display: flex;
  align-items: baseline;
  flex-wrap: wrap;
+ min-width: 768px;
+ max-width: 1024px;
 }
 
   #slidercontainer {
@@ -52,11 +55,12 @@ body{
     border-radius: 10px;
     margin: 10px;
     background-color: white;
+    width: 45%;
   }
   .img{
-    width: 300px;
+    width: 100px;
     margin-top: 5px;
-    height: 350px;
+    height: auto;
   }
   .cmimi{
     color: teal;
@@ -98,8 +102,8 @@ body{
     justify-content: space-between;
     align-content: stretch;
     margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .button1{
     text-align: right;
@@ -132,6 +136,8 @@ body{
     justify-content: space-evenly;
     align-items:end;
     align-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .footermain{
     padding-right: 250px;
