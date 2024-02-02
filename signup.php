@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <?php
 include_once 'UserRepository.php';
 include_once 'user.php';
@@ -41,6 +43,7 @@ if(isset($_POST['signupbtn'])){
 }
 
 ?>
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 <!DOCTYPE html>
 <html lang="en">
 <head>

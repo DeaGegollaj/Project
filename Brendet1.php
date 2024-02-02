@@ -118,7 +118,11 @@ else{
 
 
      
+<<<<<<< HEAD
+     <h2 class="headerJ"><a href="Brendet1.html">Jumiso</a></h2>  
+=======
      <h2 class="headerJ"><a href="Brendet1.php">Jumiso</a></h2>  
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 
      <div class="photosJ">
        <div class="produktetJ">
@@ -173,7 +177,11 @@ else{
 
      
      
+<<<<<<< HEAD
+     <h2 class="headerP"><a href="Brendet1.html">Purito</a></h2>  
+=======
      <h2 class="headerP"><a href="Brendet1.php">Purito</a></h2>  
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 
      <div class="photosP">
        <div class="produktetP">
@@ -226,7 +234,11 @@ else{
     </div>
     
      
+<<<<<<< HEAD
+    <h2 class="headerH"><a href="Brendet1.html">Hemish</a></h2>  
+=======
     <h2 class="headerH"><a href="Brendet1.php">Hemish</a></h2>  
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 
     <div class="photosH">
       <div class="produktetH">
@@ -278,7 +290,11 @@ else{
   
    </div>
 
+<<<<<<< HEAD
+   <h2 class="headerB"><a href="Brendet1.html">Beauty of Joseon</a></h2>  
+=======
    <h2 class="headerB"><a href="Brendet1.php">Beauty of Joseon</a></h2>  
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 
    <div class="photosB">
      <div class="produktetB">

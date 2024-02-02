@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+<?php
+session_start();
+
+include_once("ProjectRepository.php");
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $produktet = $_POST['produktet'];
+    $cmimi = $_POST['cmimi'];
+    $brendet = $_POST['brendet'];
+    $images = $_POST['images'];
+
+    $newProducts  = new Produktet($Produktet,$cmimi,$autori,$image);
+    $hrep = new ProjectRespository();
+    $hrep->insertProduktet($newproducts);
+
+}
+
+$insertmessage = isset($_SESSION['insertmessage']) ? $_SESSION['insertmessage'] :"";
+unset($_SESSION['insertmessage']);
+
+$hrep = new ProjektRepository();
+$produktet = $hrep->getAllProducts();
+
+
+$hide="";
+if(!isset($_SESSION['username'])){
+    header("location:Login.php");
+}
+else{
+    if($_SESSION['role'] == "admin"){
+        $hide = "Dashboard";
+    }
+
+?>
+}
+
+=======
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 <!DOCTYPE html>
 <html lang="en">
 <head>
