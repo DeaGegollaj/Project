@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+=======
+<?php
+include_once 'UserRepository.php';
+include_once 'user.php';
+
+if(isset($_POST['signupBtn'])){
+    if(empty($_POST['name']) || empty($_POST['lastname']) || empty($_POST['email']) ||
+    empty($_POST['username']) || empty($_POST['password']) || empty($_POST['confirmpassword'])){
+        echo "Fill all fields!";
+    }else{
+        $name = $_POST['name'];
+        $surname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $confirmpassword = $_POST['confirmpassword'];
+        $id = $username.rand(100,999);
+
+        $user  = new User($id,$name,$surname,$email,$username,$password);
+        $userRepository = new UserRepository();
+
+        $userRepository->insertUser($user);
+
+
+    }
+}
+
+
+
+?>
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 <!DOCTYPE html>
 <html lang="en">
 <head>

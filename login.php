@@ -28,7 +28,11 @@
                 nameError.innerText = '';
                 passwordError.innerText = '';
         
+<<<<<<< HEAD
                 let nameRegex = /^[A-Z][a-z]{2s,8}$/;
+=======
+                let nameRegex = /^[A-Z][a-z]{2,8}$/;
+>>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
                 let passRegex = /^[A-Za-z0-9]{7,14}$/;
     
                 if (!nameRegex.test(nameInput.value)) {
