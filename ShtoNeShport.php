@@ -2,13 +2,13 @@
 include_once('BrendetRepository.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $ProductsToAdd = $_POST['produktet'];
+    $ProduktetToAdd = $_POST['produktet'];
 
-    $hrep = new BrendetRepository();
-    $existingProducts = $hrep->getProductsByProduktet($ProduktetToAdd);
+    $Shrep = new BrendetRepository();
+    $existingProduktet = $Shrep->getProduktetByProduktet($ProduktetToAdd);
 
-    if($existingProducts){
-        $hrep->insertProductsIntoShporta($produktetToAdd);
+    if($existingProduktet){
+        $Shrep->insertProduktetIntoShporta($ProduktetToAdd);
         echo "<script>alert('Your product is added to your shopping cart successfully!')</script>";
         
     }else{

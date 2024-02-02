@@ -1,19 +1,21 @@
 <?php
 session_start();
 
-include_once("ProjectRepository.php");
+include_once 'ShportaIRepository.php';
+include_once 'DatabaseConnection.php';
+
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $produktet = $_POST['produktet'];
     $cmimi = $_POST['cmimi'];
     $brendet = $_POST['brendet'];
     $images = $_POST['images'];
 
-    $newProducts  = new Produktet($Produktet,$cmimi,$autori,$image);
-    $hrep = new ProjectRespository();
-    $hrep->insertProduktet($newproducts);
+    $newProduktet  = new Produktet($Produktet,$cmimi,$autori,$image);
+    $Shrep = new ShportaIRespository();
+    $Shrep->insertProduktet($newproduktet);
 }
-$hrep = new ProjektRepository();
-$produktet = $hrep->getAllProducts();
+$Shrep = new ShportaIRepository();
+$produktet = $Shrep->getAllProduktet();
 
 ?>
 
@@ -22,7 +24,8 @@ $produktet = $hrep->getAllProducts();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shporta</title>
+    <link rel="stylesheet" href="Shporta.css">
     <style>
         @media(min-width: 768px){
             .news{
@@ -58,13 +61,13 @@ $produktet = $hrep->getAllProducts();
         
     </div>
 <main>
-        <div class="shporta">
+        <div class="cart">
             <h2 style="margin-left: 70px; margin-top: 40px; color: rgb(248, 216, 231);">Shporta Juaj</h2>
-                <?php foreach($products as $products){ ?>
+                <?php foreach($produktet as $produktet){ ?>
                     <div class="blerjet">
                         <div class="info">
                             <div>
-                                <img src="<?= $products['Image'] ?>" alt="" class="produktet">
+                                <img src="<?= $produktet['Image'] ?>" alt="" class="produktet">
                             </div>
                             <div class="produktet">
                                 <p class="name"><?= $products['Produktet'] ?></p>
@@ -106,7 +109,7 @@ $produktet = $hrep->getAllProducts();
     <div class="fundi">
          <p>Copyright 2023 Ikusei Company. All rights reserved.</p>
     </div>
-    
+
   </footer>
     
 </body>

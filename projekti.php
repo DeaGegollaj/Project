@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 session_start();
 
@@ -34,8 +33,6 @@ else{
 ?>
 }
 
-=======
->>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -44,12 +44,12 @@
 
     foreach ($users as $user) {
         echo"<tr>";
-        echo"<td>{$user['Emri']}</td">;
-        echo"<td>{$user['Mbiemri']}</td">; 
-        echo"<td>{$user['Email']}</td">;
-        echo"<td>{$user['Username']}</td">;
-        echo"<td>{$user['Pass']}</td">;
-        echo"<td>{$user['Roli']}</td">;
+        echo"<td>{$user['Emri']}</td>";
+        echo"<td>{$user['Mbiemri']}</td>"; 
+        echo"<td>{$user['Email']}</td>";
+        echo"<td>{$user['Username']}</td>";
+        echo"<td>{$user['Pass']}</td>";
+        echo"<td>{$user['Roli']}</td>";
         echo"<td><a href='Edit.php?email={$user['Email']}' style='text-decoration: none; color: rgb(65,34,52)'>Edit</a><td>";
         echo"<td><a href='Delete.php?email={$user['Email']}' style='text-decoration: none; color: rgb(65,34,52)'>Delete</a><td>";
         echo"<?tr>";
