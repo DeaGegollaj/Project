@@ -1,4 +1,41 @@
-<!DOCTYPE html>
+<?php
+
+include_once 'UserRepository.php';
+include_once 'DatabaseConnection.php';
+
+if(isset($_POST['loginbtn'])){
+    if(empty($_POST['username']) || empty($_POST['password'])){
+        echo "<div style='color: white; font-weight: bold; text-align: center; position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 15%; border-radius: 5px; padding: 10px; background-color: rgb(211,178,95);'>Please fill the required fields!</div>";
+    }
+    else{
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+
+        $urep = new UserRepository();
+        $user = $urep->getUserByUsername($username);
+
+        if($user){
+            if($_POST['password'] == $user['Pass']){
+                session_start();
+                $_SESSION['username'] = $user['Username'];
+                $_SESSION['role'] = $user['Roli'];
+        
+                header("location: projekti.php");
+                exit();
+            }
+            else{
+                echo "Invalid password!";
+            }
+        }
+        else{
+            echo "Username not found!";
+        }
+    }
+}
+?>
+ 
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

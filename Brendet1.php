@@ -1,3 +1,31 @@
+<?php
+session_start();
+nclude_once('BrendetRepository.php');
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $produktet = $_POST['produktet'];
+    $cmimi = $_POST['cmimi'];
+    $brendi = $_POST['brendi'];
+    $imagePath = $_POST['imagePath'];
+
+    $newBrendet = new ProduktetBrendet($produktet,$cmimi,$brendi,$imagePath);
+    $brep = new BrendetRepository();
+    $brep->insertProduktet($newProduktet);
+}
+
+$brep = new BrendetRepository();
+$produktet = $brep->getAllBrendet();
+
+$hide="";
+if(!isset($_SESSION['username'])){
+    header("location:LogIn.php");
+}
+else{
+    if($_SESSION['role'] == "admin"){
+        $hide = "Dashboard";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

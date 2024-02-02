@@ -1,3 +1,34 @@
+<?php
+session_start();
+include_once('BlogRepository.php');
+include_once('Teksti.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_text"])) {
+    $text = $_POST["new_text"];
+
+    $newTeksti = new Teksti($text);
+    $blrep = new BlogRepository();
+    $blrep->insertTeksti($newTeksti);
+
+    header("Location: {$_SERVER['PHP_SELF']}");
+    exit;
+}
+
+$blrep = new BlogRepository();
+$texts = $blrep->getAllTeksti();
+
+$hide="";
+if(!isset($_SESSION['username'])){
+    header("location:LogIn.php");
+}
+else{
+    if($_SESSION['role'] == "admin"){
+        $hide = "Dashboard";
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

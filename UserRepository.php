@@ -17,13 +17,13 @@
             $lastname = $user->getLastname();
             $email = $user->getEmail();
             $password = $user->getPassword();
-            $confrimPassword=$user->getConfrimPassword();
+            $roli=$user->getRoli();
           
 
-            $sql = "INSERT INTO user(Name, Lastname, Email, Password, ConfrimPassword) VALUES (?,?,?,?,?)";
+            $sql = "INSERT INTO user(name,lastname,email,password,roli) VALUES (?,?,?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$name, $lastname, $email, $password,$confrimPassword]);
+            $statement->execute([$name, $lastname, $email, $password,$roli]);
 
             echo "<script>alert('It has been added with success!')</script>";
         }
@@ -40,15 +40,19 @@
 
 
     
-        public function editStudent($name, $lastname, $email, $password, $confrimPassword){
+        public function editStudent($name, $lastname, $email, $password, $confrimPassword,$roli){
             $conn = $this->connection;
-            $sql = "UPDATE user SET Name=?,Lastname=?, Email=?, Password=?, ConfirmPassowrd=?  WHERE email=?";
+            $sql = "UPDATE user SET Name=?,Lastname=?, Email=?, Password=?, ConfirmPassowrd=?, Roli=?  WHERE email=?";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$name,$lastname, $email, $password, $confrimpassword]);
+         $result=$statement->execute([$name,$lastname, $email, $password, $confrimpassword, $roli]);
 
-            echo "<script>alert('Updated with success!')</script>";
+            if ($result){
+                
+            echo "Updated with success!";
+            } else {
 
+            echo "Update failed!";
         }
 
     
@@ -75,7 +79,17 @@
 
             return $user;
         }
+      function getUserByUsername ($username){
+        $conn = $this->connection;
 
+        $sql = "SELECT * FROM user WHERE username=?";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$username]);
+        $student=$statement->fetch();
+
+        return $user;
+      }
     }
 
 ?>

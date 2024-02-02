@@ -7,50 +7,59 @@ class user{
     private $Email;
     private $password;
     private $confirmPassword;
+    private $roli;
     
 
-    public function __construct($n, $l, $em, $p, $cp){
+    public function __construct($n, $l, $em, $p, $cp,$r){
         $this->name=$n;
         $this->lasname=$l;
         $this->Email=$em;
         $this->password=$p;
         $this->confirmPassword=$cp;
+        $this->$roli=$r;
         
     }
     
-    public function getName($n){
-        return $this->$name;
+    public function getName(){
+        return $this->name;
     }
     public function setName($n){
-        $this->Name = $n;
+        $this->name = $n;
     }
 
-    public function getLastname($l){
-        return $this->$lastname;
+    public function getLastname(){
+        return $this->lastname;
     }
     public function setLastname($l){
-        $this->Lastname = $l;
+        $this->lastname = $l;
     }
 
-    public function getEmail($em){
+    public function getEmail(){
         return $this->Email;
     }
     public function setEmail($em){
         $this->Email = $em;
     }
 
-    public function getPassword($p){
+    public function getPassword(){
         return $this->password;
     }
     public function setPassword($p){
-        $this->Password = $p;
+        $this->password = $p;
     }
 
-    public function getConfrimPassword($cp){
-        return $this->Confrimpassword;
+    public function getConfrimPassword(){
+        return $this->confirmpassword;
     }
     public function setConfirmPassword($cp){
-        $this->Confrimpassword = $cp;
+        $this->confirmpassword = $cp;
+    }
+
+    public function getRoli(){
+        return $this->$roli;
+    }
+    public function setName($r){
+        $this->roli = $r;
     }
 
     public function __toString(){

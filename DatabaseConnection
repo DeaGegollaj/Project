@@ -4,7 +4,7 @@ class DatabaseConnection{
     private $host = "localhost";
     private $username = "dea";
     private $password = "123456";
-    private $db = "Ikusei";
+    private $db = "ikusei";
 
 function startConnection(){
     try{
