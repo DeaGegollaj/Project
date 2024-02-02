@@ -13,7 +13,7 @@ body{
  background-color:#FACBBB;
  text-align:center;
  color: #688682;
- padding: 20px;
+ padding: 50px;
  margin: 0%;
  font-size: large;
  align-content: baseline;
@@ -58,9 +58,9 @@ body{
    
   }
   .img{
-    width: 100px;
+    width: 300px;
     margin-top: 5px;
-    height: auto;
+    height: 350px;
   }
   .cmimi{
     color: teal;
