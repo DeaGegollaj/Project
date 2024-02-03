@@ -27,13 +27,13 @@
             echo "<script>alert('Added successfully!')</script>";
         }
 
-        public function getAllUsers(){
+        public function getAllUser(){
             $conn = $this->connection;
 
             $sql = "SELECT * FROM users";
             $statement = $conn->query($sql);
 
-            $students = $statement->fetchAll();
+            $user = $statement->fetchAll();
             return $users;
         }
 
@@ -74,5 +74,17 @@
 
             return $user;
         }
+        
+        function getUserByUsername($username){
+            $conn = $this->connection;
+
+            $sql = "SELECT * FROM users WHERE Username=?";
+
+            $statement = $conn->prepare($sql);
+            $statement->execute([$username]);
+            $user=$statement->fetch(PDO::FETCH_ASSOC);
+
+            return $user;
     }
-    ?>
+}
+?>

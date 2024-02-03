@@ -2,8 +2,8 @@
 class DatabaseConnection{
     //keto te dhena i merrni ne baze te databazes suaj
     private $host = "localhost";
-    private $username = " ";
-    private $password = "123456";
+    private $username = "sn ";
+    private $password = "yes";
     private $db = "Ikusei";
 
 function startConnection(){

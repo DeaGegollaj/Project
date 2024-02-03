@@ -3,7 +3,8 @@ include_once 'UserRepository.php';
 include_once 'Useri.php';
 include_once 'DatabaseConnection.php';
 
-if(isset($_POST['signupbtn'])){
+
+if(isset($_POST['signupbtn']))
     if(empty($_POST['emri']) || empty($_POST['mbiemri']) || empty($_POST['email']) || empty($_POST['paswordi']) || empty($_POST['confirmPassword'])){
         echo "<script>alert('Fill all fields!');</script>";
     }else{
@@ -17,7 +18,8 @@ if(isset($_POST['signupbtn'])){
         $urep = new UserRepository();
 
         $userByEmail=$urep->getUserByEmail($email);
-        $userByName = $urep->getUserName($emri);
+        
+     
  
        if ($userByEmail){
         echo "This email is already in use!";
@@ -27,14 +29,15 @@ if(isset($_POST['signupbtn'])){
        }
        else if($paswordi !=$confirmPassword){
         echo "Your passwords don't match!";
-       } else {
+        } 
+        else{
         $user = new Useri($emri, $mbiemri, $email, $paswordi, $roli);
         $urep->insertUser($user);
         header("location: login.php");
         exit();
        }
     }
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -126,7 +129,7 @@ if(isset($_POST['signupbtn'])){
            alert("Sign-Up eshte kryer me sukses!");
 
         }
-
+    
     </script>
     
 </body>
