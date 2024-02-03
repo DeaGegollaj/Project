@@ -4,8 +4,7 @@
     class UserRepository{
         private $connection;
 
-        public function __construct()
-        {
+        public function __construct(){
             $conn = new DatabaseConnection;
             $this->connection = $conn->startConnection();
         }
@@ -13,83 +12,67 @@
         public function insertUser($user){
             $conn = $this->connection;
 
-            $name = $user->getName();
-            $lastname = $user->getLastname();
-            $email = $user->getEmail();
-            $password = $user->getPassword();
+            $name = $user->getEmri();
+            $lastname = $user->getMbiemri();
+            $emaili = $user->getEmaili();
+            $paswordi = $user->getPaswordi();
             $roli=$user->getRoli();
           
 
-            $sql = "INSERT INTO user(name,lastname,email,password,roli) VALUES (?,?,?,?,?,?)";
+            $sql = "INSERT INTO users(Emri,Mbiemri,Email,Paswordi,Roli) VALUES (?,?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$name, $lastname, $email, $password,$roli]);
+            $statement->execute([$name, $lastname, $emaili, $paswordi,$roli]);
 
-            echo "<script>alert('It has been added with success!')</script>";
+            echo "<script>alert('Added successfully!')</script>";
         }
 
         public function getAllUsers(){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM user";
+            $sql = "SELECT * FROM users";
             $statement = $conn->query($sql);
 
             $students = $statement->fetchAll();
-            return $user;
+            return $users;
         }
 
 
     
-        public function editStudent($name, $lastname, $email, $password, $confrimPassword,$roli){
+        public function editUser($emri, $mbiemri, $paswordi, $roli, $email){
             $conn = $this->connection;
-            $sql = "UPDATE user SET Name=?,Lastname=?, Email=?, Password=?, ConfirmPassowrd=?, Roli=?  WHERE email=?";
+            $sql = "UPDATE users SET Emri=?, Mbiemri=?, Paswordi=?, Roli=?  WHERE Email=?";
 
             $statement = $conn->prepare($sql);
-         $result=$statement->execute([$name,$lastname, $email, $password, $confrimpassword, $roli]);
+            $result=$statement->execute([$emri, $mbiemri, $paswordi, $roli, $email]);
 
-            if ($result){
-                
-            echo "Updated with success!";
-            } else {
-
-            echo "Update failed!";
+            if ($result){  
+                echo "Updated with success!";
+            } 
+            else {
+                echo "Update failed!". $statement->errorInfo();
+            }
         }
-
-    
 
         function deleteUser($email){
             $conn = $this->connection;
 
-            $sql = "DELETE FROM user WHERE email=?";
+            $sql = "DELETE FROM users WHERE Email=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$email]);
         }
-
-        
 
         function getUserByEmail($email){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM user WHERE email=?";
+            $sql = "SELECT * FROM users WHERE Email=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$email]);
-            $student=$statement->fetch();
+            $user=$statement->fetch(PDO::FETCH_ASSOC);
 
             return $user;
         }
-      function getUserByUsername ($username){
-        $conn = $this->connection;
-
-        $sql = "SELECT * FROM user WHERE username=?";
-
-        $statement = $conn->prepare($sql);
-        $statement->execute([$username]);
-        $student=$statement->fetch();
-
-        return $user;
-      }
     }
-
-?>
+    ?>
