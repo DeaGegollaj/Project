@@ -28,7 +28,7 @@
             echo "<script>alert('It has been added with success!')</script>";
         }
 
-        public function getAllUsers(){
+        public function getAllUser(){
             $conn = $this->connection;
 
             $sql = "SELECT * FROM user";
@@ -89,7 +89,5 @@
         $student=$statement->fetch();
 
         return $user;
-      }
-    }
-
+         } }    }
 ?>

@@ -58,7 +58,7 @@ class user{
     public function getRoli(){
         return $this->$roli;
     }
-    public function setName($r){
+    public function setRoli($r){
         $this->roli = $r;
     }
 

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 include_once 'UserRepository.php';
 include_once 'user.php';
@@ -20,19 +18,19 @@ if(isset($_POST['signupbtn'])){
         $userRepository = new UserRepository();
 
         $userByEmail=$userRepository->getUserByEmail($email);
-        $userByUsername=$userRepository->getUserByUsername($username);
+        $userByname=$userRepository->getUserByname($name);
  
        if ($userByEmail){
-        echo "This email is already in use!"
+        echo "This email is already in use!";
        }
        else if($userByUsername){
-        echo "This username is already in use"
+        echo "This username is already in use";
        }
        else if (strlen($password)<7 || strlen($password)>14){
-        echo "Your password should require 7 to 14 characters!"
+        echo "Your password should require 7 to 14 characters!";
        }
        else if($password !=$confirm){
-        echo "Your password and confirimpassword don't match!"
+        echo "Your password and confirimpassword don't match!";
        } else {
         $user = new User($name, $lastname,$email, $password, $confirmpassword,$roli);
         $userRepository->insertUser($user);
@@ -43,7 +41,6 @@ if(isset($_POST['signupbtn'])){
 }
 
 ?>
->>>>>>> 2c013d2a6c93cc1c427efb87766818333ccdbd45
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"href="Dashboard.css">
 </head>
 <body>
 <div class="header">
@@ -28,9 +29,8 @@
         <thread>
             <tr>
                 <th>Name</th>
-                <th>Surname</th>
+                <th>Lastname</th>
                 <th>Email</th>
-                <th>Username</th>
                 <th>Password</th>
                 <th>Role</th>
 </tr>
@@ -40,25 +40,45 @@
     include_once('UserRepository.php');
 
     $urep = new UserRepository();
-    $users = $urep->getAllUser();
+    $user = $urep->getAllUser();
 
-    foreach ($users as $user) {
+    foreach ($user as $user) {
         echo"<tr>";
-        echo"<td>{$user['Emri']}</td>";
-        echo"<td>{$user['Mbiemri']}</td>"; 
+        echo"<td>{$user['Namei']}</td>";
+        echo"<td>{$user['LastName']}</td>"; 
         echo"<td>{$user['Email']}</td>";
-        echo"<td>{$user['Username']}</td>";
-        echo"<td>{$user['Pass']}</td>";
+        echo"<td>{$user['Password']}</td>";
         echo"<td>{$user['Roli']}</td>";
-        echo"<td><a href='Edit.php?email={$user['Email']}' style='text-decoration: none; color: rgb(65,34,52)'>Edit</a><td>";
-        echo"<td><a href='Delete.php?email={$user['Email']}' style='text-decoration: none; color: rgb(65,34,52)'>Delete</a><td>";
+        echo"<td><a href='Edit.php?email={$user['Email']}' style='text-decoration: none; color: #f8cfc1'>Edit</a><td>";
+        echo"<td><a href='Delete.php?email={$user['Email']}' style='text-decoration: none; color: #f8cfc1'>Delete</a><td>";
         echo"<?tr>";
     }
        ?>
       </tbody>
    </tabel>
-
 </main>
+<footer>
+    <div class="f">
+            <p>Ourlinks</p>
+      
+        <div class="ff">
+            <a href=""><img src="facebook.png " alt="fb" width="32px" height="32px"></a>
+            <a href=""><img src="instagram.png " alt="ig" width="32px" height="32px"></a>
+        </div>
+    </div>
+        <div class="footermain">
+             <div class="footerleft">
+            <p>Ikusei: Our curated skincare collection is a tribute to simplicity and effectiveness. Embrace self-care with us and discover the authentic radiance that comes from harnessing the power of natural ingredients. Ikusai: where skincare is as pure and genuine as you.</p>
+        </div>
+        <div class ="footercenter">
+        <p>Transporti</p>
+        <p>Contact us</p>
+        <p>Privacy Policy</p>
+        </div>
+    <div class="fundi">
+         <p>Copyright 2023 Ikusei Company. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
