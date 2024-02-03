@@ -25,7 +25,7 @@ else{
 <html>  
 <link rel="stylesheet" href='Edit.css">
 <body>
-    <form class="wrapper" method="post" action="">
+    <form class="container" method="post" action="">
         <h1 style="text-align: center;">Edit User</h1>
         <input class="inputbox" type="hidden" name="email" value="<?php echo $user['Email']; ?>"><br>
         <input class="inputbox" placeholder="Name" type="text" name="name" value="<?php echo $user['Name']; ?>"><br>
